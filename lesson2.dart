@@ -22,4 +22,13 @@ main() {
   print(g);
   g.add('d');  // 重複して入ることはない
   print(g);
+
+  Map h = {
+    // Key: Value
+    'first': 'one',
+    'second': 'two',
+    'third': 'three'
+  };
+  h.addAll({'fourth': 'four'});
+  print('$h, ${h.length}, ${h['first']}'); // Keyでアクセス
 }
