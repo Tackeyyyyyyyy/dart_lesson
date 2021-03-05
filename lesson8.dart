@@ -1,6 +1,7 @@
 class Person {
   String? firstName;
   String? lastName;
+
   // 静的メンバ変数
   static const salary = 16;
 
@@ -8,9 +9,11 @@ class Person {
     this.firstName = s;
     this.lastName = t;
   }
+
   greed() {
     print('Hello ${firstName} ${lastName}');
   }
+
   // 静的メンバ関数
   static void staticMethod() {
     print('Hello');
@@ -25,6 +28,7 @@ class Engineer extends Person {
   Engineer(String firstName, String lastName)
       : name = '',
         super(firstName, lastName);
+
   // メソッドの上書き
   // @overrideは任意（けど書いたほうがわかりやすい）
   @override
@@ -36,10 +40,12 @@ class Engineer extends Person {
 
 class Dog {
   var name;
+
   Dog() {
     this.name = 'Anonymous';
   }
 }
+
 main() {
   // インスタンス生成
   var dog = new Dog();
