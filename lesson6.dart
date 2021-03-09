@@ -17,7 +17,7 @@ main() {
 
   print(testFunction2());
 
-  void enableFlags({bool? hidden, bool? bold}) {
+  void enableFlags({bool hidden, bool bold}) {
     print('$bold $hidden');
   }
   enableFlags(hidden: true, bold: true);

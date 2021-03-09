@@ -1,6 +1,6 @@
 class Person {
-  String? firstName;
-  String? lastName;
+  String firstName;
+  String lastName;
 
   // 静的メンバ変数
   static const salary = 16;

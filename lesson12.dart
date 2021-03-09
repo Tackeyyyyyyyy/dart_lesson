@@ -15,6 +15,20 @@ main() {
 
   print('Energy=${box.getByKey('Energy')}');
 
+  T sum<T extends num>(List<T> list, T init){
+    T sum = init;
+    list.forEach((value) {
+      sum += value;
+    });
+    return sum;
+  }
+
+  int r1 = sum<int>([1,2,3], 0);
+  print(r1);
+  double r2 = sum([1.1, 2.2, 3.3], 0.0);
+  print(r2);
+
+
   List <String> logTypes = <String>[];
   logTypes.add("WARNING");
   logTypes.add("ERROR");
@@ -35,7 +49,7 @@ main() {
 class Box<T> {
   Map<String, T> list = <String, T>{};
 
-  T? getByKey(String key) {
+  T getByKey(String key) {
     return list[key];
   }
 
